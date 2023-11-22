@@ -35,7 +35,7 @@ describe("Notify Test", function () {
           ...fcmTokenData,
         });
       // eslint-disable-next-line no-console
-      console.log("usertoken", userIdToken0);
+      console.log("usertosken", userIdToken0);
       const response = await chai
         .request(app)
         .post("/notify")

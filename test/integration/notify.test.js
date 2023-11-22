@@ -34,7 +34,8 @@ describe("Notify Test", function () {
         .send({
           ...fcmTokenData,
         });
-
+      // eslint-disable-next-line no-console
+      console.log("usertoken", userIdToken0);
       const response = await chai
         .request(app)
         .post("/notify")
@@ -42,6 +43,8 @@ describe("Notify Test", function () {
         .send({
           ...notifyData,
         });
+      // eslint-disable-next-line no-console
+      console.log("response", response);
       expect(response).to.have.status(200);
       expect(response.body.message).equals("User notified successfully");
     });
